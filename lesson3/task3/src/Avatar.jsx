@@ -1,5 +1,4 @@
 import React from 'react';
-const rootElement= document.querySelector("#root");
 const UserAvatar = (props)=>{
     return (
         <img className="avatar" 
