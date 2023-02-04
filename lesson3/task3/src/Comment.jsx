@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import './comment.scss';
 import './index.scss';
 import moment from 'moment';
