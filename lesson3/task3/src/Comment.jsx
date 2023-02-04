@@ -26,7 +26,7 @@ ReactDOM.render(
      <Comment 
     author={UserInfo}
     text="Good job"
-    data={new Data('2012-04-23T18:25:43.511Z')} 
+    data={new Date('2012-04-23T18:25:43.511Z')} 
   
     />,
     rootElement
