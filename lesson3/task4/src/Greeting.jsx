@@ -2,13 +2,7 @@ import './index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 const rootElement = document.querySelector("#root");
-/*function get_age(date) {
-   let date1 = new Date(date);
-   let age = date1.getTime();
-   let age2 = new Date().getTime();
-   let age3 = Math.round((age2 - age)/ (24 * 3600 * 365 * 1000));
-   return age3;
-}*/
+
     
 const Greeting = (props)=>{
     let age = new Date(props.birthDate);
