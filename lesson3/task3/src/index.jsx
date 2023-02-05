@@ -6,7 +6,7 @@ import Comment from './Comment.jsx';
 const rootElement = document.querySelector("#root");
 const UserInfo = {
     name: 'Tom',
-    avatarUrl: 'https://avatars1.githubusercontent.com/u1001'
+    avatarUrl: 'https://avatars1.githubusercontent.com/u10001'
   };
 ReactDOM.render(
      <Comment 
