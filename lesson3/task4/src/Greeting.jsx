@@ -18,4 +18,4 @@ const Greeting = (props)=>{
 }
 export default Greeting;
 
-ReactDOM.render(<Greeting firstName="John" lastName="Doe" birthDate="Mar, 31, 85 20:17:40 GMT+00:00"/>, rootElement);
+ReactDOM.render(<Greeting firstName="John" lastName="Doe" birthDate="Feb, 25, 85 20:17:40 GMT+00:00"/>, rootElement);
