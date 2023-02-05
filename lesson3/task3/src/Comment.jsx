@@ -8,7 +8,7 @@ import UserInfo1 from './UserInfo.jsx';
 const formatDate = date => moment(date).format('DD MMM YYYY');
 const UserInfo = {
   name: 'Tom',
-  avatarUrl: 'https://avatar1.githubusercontent.com'
+  avatarUrl: 'https://avatars1.githubusercontent.com/u10001'
 };
 function Comment(props) {
   return (
