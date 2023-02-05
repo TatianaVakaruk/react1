@@ -1,7 +1,7 @@
 import './index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-const rootElement = document.querySelector("#root");
+const rootElem = document.querySelector("#root");
 
     
 function Greeting(props) {
@@ -17,4 +17,7 @@ function Greeting(props) {
   
   export default Greeting;
 
-ReactDOM.render(<Greeting firstName="John" lastName="Doe" birthDate="Feb, 6, 85 20:17:40 GMT+00:00"/>, rootElement);
+  ReactDOM.render(
+    <Greeting firstName="Tom" lastName="Selek" birthDate={new Date(2019, 11, 31)} />,
+    rootElem,
+  );
