@@ -10,9 +10,12 @@ const Greeting = (props)=>{
    let age2 = new Date().getTime();
    let age3 = Math.round((age2 - age1)/ (24 * 3600 * 365 * 1000));
     return (
-        <div className="greeting">
+       
         <div className="greeting">{`My name is ${props.firstName} ${props.lastName}. I am ${age3} years old`}</div>
-        </div>
+     
     )
+    
 }
+export default Greeting;
+
 ReactDOM.render(<Greeting firstName="John" lastName="Doe" birthDate="Jan, 15, 85 20:17:40 GMT+00:00"/>, rootElement);
