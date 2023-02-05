@@ -5,17 +5,16 @@ const rootElement = document.querySelector("#root");
 
     
 const Greeting = (props)=>{
-    let age = new Date(props.birthDate);
-   let age1 = age.getTime();
-   let age2 = new Date().getTime();
-   let age3 = Math.abs(Math.floor((age2 - age1)/ (24 * 3600 * 365 * 1000)));
+    const difer = new Date() - new Date(props.birthDate);
+  const yearsOld = Math.trunc(difer / 31536000000);
+
     return (
        
-        <div className="greeting">{`My name is ${props.firstName} ${props.lastName}. I am ${age3} years old`}</div>
+        <div className="greeting">{`My name is ${props.firstName} ${props.lastName}. I am ${yearsOld} years old`}</div>
      
     )
     
 }
 export default Greeting;
 
-ReactDOM.render(<Greeting firstName="John" lastName="Doe" birthDate="Feb, 25, 85 20:17:40 GMT+00:00"/>, rootElement);
+ReactDOM.render(<Greeting firstName="John" lastName="Doe" birthDate="Feb, 6, 85 20:17:40 GMT+00:00"/>, rootElement);
