@@ -1,6 +1,6 @@
 import React from 'react';
 import UserAvatar from './Avatar.jsx';
-const UserInfo1 = (props)=>{
+const UserInfo = (props)=>{
     return (
 <div className="user-info">
         <UserAvatar 
@@ -13,4 +13,4 @@ const UserInfo1 = (props)=>{
       </div>
     )
 }
-export default UserInfo1;
+export default UserInfo;
