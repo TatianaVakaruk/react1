@@ -1,6 +1,4 @@
 import React from 'react';
-import './comment.scss';
-import './index.scss';
 import moment from 'moment';
 import UserInfo1 from './UserInfo.jsx';
 
