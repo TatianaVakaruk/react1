@@ -3,9 +3,7 @@ import './counter.scss';
 
 
 
-setInterval(()=>{
-    counter +=1;
-    }, 1000);
+
 
 class Counter extends Component {
     constructor(props){
