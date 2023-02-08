@@ -3,10 +3,9 @@ import Clock from './Clock.jsx';
 
 const App = ()=>{
     return (
-        <>
-        <Clock offset="-6"/>
+    
+        <Clock offset="2"/>
         
-        </>
     );
 };
 export default App;
