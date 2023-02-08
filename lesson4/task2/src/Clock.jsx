@@ -11,6 +11,7 @@ class Clock extends Component {
         super(props);
         this.state = {
           date: getTimeWithOffset(this.props.offset),
+          location:this.props.location
         };
         
 setInterval(()=>{
@@ -27,7 +28,7 @@ setInterval(()=>{
         return (
         
           <div className="clock">
-          <div className="clock__location">New York</div>
+          <div className="clock__location">${location}</div>
           <div className="clock__time">{moment(this.state.date).format('h:mm:ss A')}</div>
         </div>
                  
