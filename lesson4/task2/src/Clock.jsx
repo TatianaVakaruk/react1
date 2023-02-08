@@ -28,7 +28,7 @@ setInterval(()=>{
         
           <div className="clock">
           <div className="clock__location">New York</div>
-          <div className="clock__time">7:00:51 AM</div>
+          <div className="clock__time">{moment(this.state.date).format('h:mm:ss A')}</div>
         </div>
                  
                   );
