@@ -4,7 +4,7 @@ import Clock from './Clock.jsx';
 const App = ()=>{
     return (
         <>
-        <Clock location="Kiev" offset="2"/>
+        <Clock offset="-6"/>
         
         </>
     );
