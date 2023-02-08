@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const getTimeWithOffset = offset => {
     const currentTime = new Date();
     const utcOffset = currentTime.getTimezoneOffset() / 60;
-const clock1 =new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
+let clock1 =new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
 
   let hours = clock1.getHours();
  let  minutes= clock1.getMinutes();
