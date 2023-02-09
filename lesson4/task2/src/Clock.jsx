@@ -27,13 +27,12 @@ setInterval(()=>{
 
     render (){
         return (
-        
-          <div className="clock">
-          <div className="clock__location">{this.state.location}</div>
-          <div className="clock__time">{moment(this.state.date).format('h:mm:ss A')}</div>
+        <div className="clock">
+        <div className="clock__location">{this.state.location}</div>
+        <div className="clock__time">{moment(this.state.date).format('h:mm:ss A')}</div>
         </div>
                  
-                  );
+);
     }
 }
 export default Clock;
