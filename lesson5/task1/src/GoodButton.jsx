@@ -1,10 +1,10 @@
 import React from 'react';
 
-const GoodButton = () => {
+const GoodButton = () => (
     <button className='fancy-button'
     onClick = {()=>alert('Good job!')}
     >
         Click Me!
         </button>
-};
+);
 export default GoodButton;
