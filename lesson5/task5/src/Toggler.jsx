@@ -4,7 +4,7 @@ class Toggler extends Component{
     constructor(props){
         super(props);
         this.state={
-            toggle:'Off',
+            toggle:'On',
            
         };
     }
@@ -12,14 +12,14 @@ class Toggler extends Component{
         counter++;
         if (counter % 2 === 1){
         this.setState({
-        toggle:'On',
+        toggle:'Off',
         
     })
 }
 if (counter % 2 === 0){
     
     this.setState({
-        toggle:'Off',
+        toggle:'On',
         
     })
 }
