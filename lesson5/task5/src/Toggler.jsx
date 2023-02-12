@@ -10,7 +10,6 @@ class Toggler extends Component{
     }
     handleClick (){
         counter++;
-        console.log(counter);
         if (counter % 2 === 1){
         this.setState({
         toggle:'On',
