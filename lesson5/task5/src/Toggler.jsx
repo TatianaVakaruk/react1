@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-let boolean= true;
+
 class Toggler extends Component{
     
     constructor(props){
@@ -12,14 +12,14 @@ class Toggler extends Component{
     }
     handleClick (){
         console.log(boolean);
-        if (boolean === true){
+        if (this.state.boolean === true){
         this.setState({
         toggle:'On',
         boolean:false
         
     })
 }
-      if (boolean === false){
+      if (this.state.boolean === false){
     
     
     this.setState({
