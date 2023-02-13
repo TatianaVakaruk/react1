@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 const buttonCoral= document.querySelector(".picker__button.picker__button_coral");
 const buttonAqua= document.querySelector(".picker__button.picker__button_aqua");
 const buttonBisque= document.querySelector(".picker__button.picker__button_bisque");
-class ColorPincker extends Component {
+class ColorPicker extends Component {
     
         constructor(props){
             super(props);
@@ -46,4 +46,4 @@ class ColorPincker extends Component {
         )
     }
 }
-export default ColorPincker;
+export default ColorPicker;
