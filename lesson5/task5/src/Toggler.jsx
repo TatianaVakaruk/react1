@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-let counter = 0;
+let boolean = true;
 class Toggler extends Component{
     constructor(props){
         super(props);
         this.state={
-            toggle:'Off'
+            toggle:'Off',
+            boolean: true
            
         };
     }
     handleClick (){
-        counter++;
-        if (counter % 2 === 1){
+        
+        if (boolean === true){
         this.setState({
-        toggle:'On'
+        toggle:'On',
+        boolean:false
         
     })
 }
-if (counter % 2 === 0){
+if (boolean === false){
     
     this.setState({
-        toggle:'Off'
+        toggle:'Off',
+        boolean : true
         
     })
 }
