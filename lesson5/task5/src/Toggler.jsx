@@ -31,7 +31,7 @@ class Toggler extends Component{
     }
     render(){
         return (
-            <div onClick={()=>{this.handleClick()}} className="toggler">{this.state.toggle}{this.state.boolean}</div>
+            <div onClick={()=>{this.handleClick()}} className="toggler">{this.state.toggle}</div>
         )
     }
     
