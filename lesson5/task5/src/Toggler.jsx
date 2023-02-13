@@ -18,7 +18,7 @@ class Toggler extends Component{
         
     })
 }
-      if (this.state.boolean === false){
+      else{
     
     
     this.setState({
