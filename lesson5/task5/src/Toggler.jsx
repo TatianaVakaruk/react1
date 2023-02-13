@@ -11,7 +11,6 @@ class Toggler extends Component{
         };
     }
     handleClick (){
-        console.log(boolean);
         if (this.state.boolean === true){
         this.setState({
         toggle:'On',
