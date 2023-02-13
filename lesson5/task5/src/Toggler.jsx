@@ -11,7 +11,7 @@ class Toggler extends Component{
         };
     }
     handleClick (){
-        
+        console.log(boolean);
         if (boolean === true){
         this.setState({
         toggle:'On',
@@ -19,7 +19,8 @@ class Toggler extends Component{
         
     })
 }
-if (boolean === false){
+      if (boolean === false){
+    
     
     this.setState({
         toggle:'Off',
