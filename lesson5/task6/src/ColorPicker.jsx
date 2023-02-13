@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-const buttonCoral= document.querySelector(".picker__button.picker__button_coral");
-const buttonAqua= document.querySelector(".picker__button.picker__button_aqua");
-const buttonBisque= document.querySelector(".picker__button.picker__button_bisque");
+
 class ColorPicker extends Component {
     
         constructor(props){
@@ -11,22 +9,21 @@ class ColorPicker extends Component {
                
             };
         }
-        setColor(){
-        if (buttonCoral){
-            this.setState({
-                toggle:'Coral',
-        })
-    }
-        if (buttonAqua){
+        setAqua(){
+        
             this.setState({
                 toggle:'Aqua',
         })
-        }
-        if (buttonBisque){
-            this.setState({
-                toggle:'Bisque',
+    }
+    setBisque(){
+        this.setState({
+            toggle:'Bisque'
         })
-        }
+    }
+    setCoral(){
+        this.setState({
+            toggle:'Coral'
+        })
     }
     Clear(){
         this.setState({
@@ -38,9 +35,9 @@ class ColorPicker extends Component {
             <div>
   <div className="picker__title">{this.state.toggle}</div>
   <div>
-    <button onMouseEnter={()=>this.setColor()} onMouseLeave={()=>this.Clear()} className="picker__button picker__button_coral"></button>
-    <button onMouseEnter={()=>this.setColor()} onMouseLeave={()=>this.Clear()} className="picker__button picker__button_aqua"></button>
-    <button onMouseEnter={()=>this.setColor()} onMouseLeave={()=>this.Clear()} className="picker__button picker__button_bisque"></button>
+    <button onMouseEnter={()=>this.setCoral()} onMouseLeave={()=>this.Clear()} className="picker__button picker__button_coral"></button>
+    <button onMouseEnter={()=>this.setAqua()} onMouseLeave={()=>this.Clear()} className="picker__button picker__button_aqua"></button>
+    <button onMouseEnter={()=>this.setBisque()} onMouseLeave={()=>this.Clear()} className="picker__button picker__button_bisque"></button>
   </div>
 </div>
         )
