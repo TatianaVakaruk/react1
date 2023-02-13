@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+let boolean = true;
 class Toggler extends Component{
     
     constructor(props){
