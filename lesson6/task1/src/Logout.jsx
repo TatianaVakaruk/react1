@@ -2,9 +2,9 @@ import React from 'react';
 
 
 
-const Logout = ()=>{
+const Logout = (props)=>{
     return (
-        <button className= "btn logout">Logout</button>
+        <button onClick = {props.onLogout} className= "btn logout">Logout</button>
     )
 }
 export default Logout;
