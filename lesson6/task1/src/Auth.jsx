@@ -9,7 +9,7 @@ class Auth extends Component{
             isLoggedIn: false
         }
     }
-    onLogin  (){
+    onLogin =()=>{
         this.setState({
          isLoggedIn:true   
         })
