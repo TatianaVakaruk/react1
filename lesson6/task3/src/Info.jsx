@@ -3,7 +3,7 @@ import React from 'react';
 const Info=({ text })=>{
     
     return (
-        <div className='message'>
+        <div className='info'>
             {text}
         </div>
     )
