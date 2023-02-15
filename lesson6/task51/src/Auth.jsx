@@ -12,15 +12,15 @@ class Auth extends Component{
         }
     }
     onLogin =()=>{
-        this.state= {
+        this.setState= ({
             state: false,
             
-        }
+        })
     }
     onLogout=()=>{
-        this.state= {
+        this.setState= ({
             state:true,
-        }
+        })
     }
     render(){
         return (
