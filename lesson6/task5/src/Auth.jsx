@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Spinner from './Spinner';
 import Login from './Login';
 import Logout from './Logout';
-import Online from '../../task4/src/Online';
+
 class Auth extends Component{
     constructor(props){
         super(props);
