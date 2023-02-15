@@ -1,7 +1,9 @@
 import React from 'React';
 const Logout = (props)=>{
+    
     return (
-        <button onClick = {props.onLogout} class="logout btn">Logout</button>
+        setTimeout((<button onClick = {props.onLogout} class="logout btn">Logout</button>
+    ), 2000)
     )
 }
 export default Logout;

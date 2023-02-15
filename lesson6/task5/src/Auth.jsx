@@ -13,18 +13,18 @@ class Auth extends Component{
     }
     onLogin =()=>{
         this.state= {
-            state: true,
+            state: false,
             
         }
     }
     onLogout=()=>{
         this.state= {
-            state: false,
+            state:true,
         }
     }
     render(){
         return (
-          <div>{this.state.state ? (<Online onLogin = {this.onLogin}/>) : ((<Spinner size={10}/>) (<Logout onLogout = {this.onLogout}/>))}</div>
+          <div>{this.state.state ? (<Login onLogin = {this.onLogin}/>) : ((<Spinner size={10}/>) (<Logout onLogout = {this.onLogout}/>))}</div>
 
         )
     }
