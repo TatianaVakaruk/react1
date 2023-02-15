@@ -1,34 +1,47 @@
-import React, { Component } from 'react';
 import Spinner from './Spinner';
 import Login from './Login';
 import Logout from './Logout';
+import React, { Component } from 'react';
+class Auth extends Component {
+  constructor(props) {
+    super(props);
 
-class Auth extends Component{
-    constructor(props){
-        super(props);
-        this.state= {
-            state: true,
-            
-        }
-    }
-    onLogin =()=>{
-        this.setState= ({
-            state: false,
-            
-        })
-    }
-    onLogout=()=>{
-        this.setState= ({
-            state:true,
-        })
-    }
-    render(){
-        return (
-          <div>{this.state.state ? (<Login onLogin = {this.onLogin}/>) : ((<Spinner size={10}/>) (<Logout onLogout = {this.onLogout}/>))}</div>
+    this.state = {
+      isLoggedIn: false,
+      spinner: false,
+    };
+  }
+  handleLogoinClick = () => {
+    this.setState({
+      spinner: true,
+    });
 
-        )
-    }
+setTimeout(
+  () =>
+    this.setState({
+      isLoggedIn: true,
+      spinner: false,
+    }),
+  2000,
+);
+  };
 
-   
+  handleLogoutClick = () => {
+    this.setState({
+      isLoggedIn: false,
+    });
+  };
+
+  render() {
+    let button;
+    if (this.state.isLoggedIn) {
+      button = <Logout onLogout={this.handleLogoutClick} />;
+    } else {
+      button = this.state.spinner ? <Spinner size={'45px'} /> : <Login onLogin={this.handleLogoinClick} />;
+    }
+    return <>
+    {button}
+    </>
+  }
 }
 export default Auth;
