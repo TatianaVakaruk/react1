@@ -33,15 +33,17 @@ setTimeout(
   };
 
   render() {
-    let button;
-    if (this.state.isLoggedIn) {
-      button = <Logout onLogout={this.handleLogoutClick} />;
-    } else {
-      button = this.state.isSpinnerOn ? <Spinner size={'45px'} /> : <Login onLogin={this.handleLogoinClick} />;
-    }
-    return <>
-    {button}
-    </>
+    return (
+      <>
+        {this.state.isLoggedIn ? (
+          <Logout onLogout={this.handleLogoutClick} />
+        ) : this.state.isSpinnerOn ? (
+          <Spinner size={50} />
+        ) : (
+          <Login onLogin={this.handleLogoinClick} />
+        )}
+      </>
+    );
   }
 }
 export default Auth;
