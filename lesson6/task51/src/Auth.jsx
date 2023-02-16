@@ -13,14 +13,14 @@ class Auth extends Component {
   }
   handleLogoinClick = () => {
     this.setState({
-      spinner: true,
+      isSpinnerOn: true,
     });
 
 setTimeout(
   () =>
     this.setState({
       isLoggedIn: true,
-      spinner: false,
+      isSpinnerOn: false,
     }),
   2000,
 );
@@ -37,7 +37,7 @@ setTimeout(
     if (this.state.isLoggedIn) {
       button = <Logout onLogout={this.handleLogoutClick} />;
     } else {
-      button = this.state.spinner ? <Spinner size={'45px'} /> : <Login onLogin={this.handleLogoinClick} />;
+      button = this.state.isSpinnerOn ? <Spinner size={'45px'} /> : <Login onLogin={this.handleLogoinClick} />;
     }
     return <>
     {button}
