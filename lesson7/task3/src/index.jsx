@@ -4,7 +4,7 @@ import './index.scss';
 import TransactionsList from './TransactionsList';
 
 const rootElement = document.querySelector('#root');
-const translations = [
+const transactions = [
     {
       id: 'id-0',
       from: 'USD',
@@ -31,5 +31,5 @@ const translations = [
     },
   ];
 
-  ReactDOM.render(<TransactionsList translations={translations} />, rootElement);
+  ReactDOM.render(<TransactionsList transactions={transactions} />, rootElement);
  
