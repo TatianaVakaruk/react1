@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import User from './User';
 
 
-class UserList extends Component {
+class UsersList extends Component {
     state={
         sorting:null,
     }
@@ -40,4 +40,4 @@ render(){
 }
 }
 
-export default UserList;
+export default UsersList;
