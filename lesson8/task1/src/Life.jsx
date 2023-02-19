@@ -13,11 +13,10 @@ class Life extends Component{
         console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
         return nextProps.number % 2;
     }
-componentDidUpdate(prevProps, prevState){
+    componentDidUpdate(prevProps, prevState){
     
-    console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
-    
-}
+        console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
+    }
     componentWillUnmount(){
         console.log('componentWillUnmount(): cleanup before DOM related to component will be removed'); 
     }
