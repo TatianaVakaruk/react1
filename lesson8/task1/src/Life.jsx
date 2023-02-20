@@ -6,9 +6,8 @@ class Life extends Component{
         console.log('constructor: good place to create state');
     }
     componentDidMount(){console.log('componentDidMount: API calls, subscriptions');}
-    shouldComponentUpdate(nextProps, nextState){
-        console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
-        return nextProps.number % 2;
+    shouldComponentUpdate(nextProps, nextState){console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
+return nextProps.number % 2;
     }
     componentDidUpdate(prevProps, prevState){
         console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
