@@ -19,6 +19,7 @@ class App extends Component {
         <div>
             <button onClick={this.toggle}>Toggle</button>
         <div>{this.state.visible && <Clock location="Kiyv" offset={2}/>}</div>
+
         </div>
         )
 };
