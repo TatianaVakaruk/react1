@@ -18,7 +18,7 @@ class App extends Component {
         return(
         <div>
             <button onClick={this.toggle}>Toggle</button>
-        <div>{this.state.visible && <Clock location="Kiyv"/>}</div>
+        <div>{this.state.visible && <Clock location="Kiyv" offset={2}/>}</div>
         </div>
         )
 };
