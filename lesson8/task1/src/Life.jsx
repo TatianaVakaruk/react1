@@ -13,7 +13,7 @@ class Life extends Component{
         return nextProps.number % 2;
     }
     componentDidUpdate(prevProps, prevState){
-     console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
+        console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
     }
     componentWillUnmount(){
         console.log('componentWillUnmount(): cleanup before DOM related to component will be removed'); 
