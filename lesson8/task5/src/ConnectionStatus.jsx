@@ -32,7 +32,7 @@ class ConnectionStatus extends Component{
     }
     render(){
         
-        return <div className={`status${status === 'offline' ? ' status_offline' : ''}`}>{this.state.status}</div>
+        return <div className={`status ${this.state.status === 'offline' ? ' status_offline' : ''}`}>{this.state.status}</div>
     }
 }
 export default ConnectionStatus;
