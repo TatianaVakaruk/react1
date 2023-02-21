@@ -2,26 +2,24 @@ import React, { Component } from 'react';
 
 class ConnectionStatus extends Component{
     state={
-        date: "online"
+        status: "online"
     }
 
     componentDidMount(){
-        if (navigator.online){
-            return   window.addEventListener(`online`,this.isOnline);
-           }
-              else{
-               return window.addEventListener(`offline`, this.isOffline);
-              }
+        
+              window.addEventListener(`online`,this.isOnline);
+            window.addEventListener(`offline`, this.isOffline);
+              
        }
     
     isOnline(){
         this.setState({
-            date:"online"
+            status:"online"
         })
     }
     isOffline(){
         this.setState({
-            date:"offline"
+            status:"offline"
         })
     }
     componentWillUnmount(){
@@ -29,7 +27,7 @@ class ConnectionStatus extends Component{
         window.removeEventListener(`offline`, this.isOffline);
     }
     render(){
-        return <div className="status ">{this.state.date}</div>
+        return <div className="status ">{this.state.status}</div>
     }
 }
 export default ConnectionStatus;
