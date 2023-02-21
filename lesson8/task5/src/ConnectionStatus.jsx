@@ -12,11 +12,12 @@ class ConnectionStatus extends Component{
             this.isOff();
               
        }
-    isOff=()=>{
-        if (window.addEventListener(`offline`, this.isOffline)){
+       isOff=()=>{
+        if (this.props.status === 'offline'){
             div.classList.add('status_offline');
         }
     }
+    
     isOnline=()=>{
         this.setState({
             status:"online"
@@ -33,7 +34,8 @@ class ConnectionStatus extends Component{
         this.isOff();
     }
     render(){
-        return <div className="status ">{this.state.status}</div>
+       
+        return <div className='status'>{this.state.status}</div>
     }
 }
 export default ConnectionStatus;
