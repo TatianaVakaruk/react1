@@ -25,13 +25,10 @@ return (
   <img
     alt="User Avatar"
     src={avatar_url}
-   
-    class="user__avatar"
+   class="user__avatar"
   />
   <div class="user__info">
-   
-    <span class="user__name">{name}</span>
-    
+   <span class="user__name">{name}</span>
     <span class="user__location">{location}</span>
   </div>
 </div>
