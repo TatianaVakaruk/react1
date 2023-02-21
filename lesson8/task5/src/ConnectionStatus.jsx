@@ -9,15 +9,20 @@ class ConnectionStatus extends Component{
         
               window.addEventListener(`online`,this.isOnline);
             window.addEventListener(`offline`, this.isOffline);
+            this.isOff();
               
        }
-    
-    isOnline(){
+    isOff=()=>{
+        if (window.addEventListener(`offline`, this.isOffline)){
+            div.classList.add('status_offline');
+        }
+    }
+    isOnline=()=>{
         this.setState({
             status:"online"
         })
     }
-    isOffline(){
+    isOffline=()=>{
         this.setState({
             status:"offline"
         })
