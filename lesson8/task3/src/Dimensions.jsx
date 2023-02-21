@@ -30,6 +30,7 @@ this.setDimensions(innerWidth, innerHeight);
         })
         document.title= `${innerWidth} x ${innerHeight}`;
     }
+    componentWillUnmount(){}
     render(){
         return <div className="dimensions">
             {`${this.state.width}px - ${this.state.height}px`}
