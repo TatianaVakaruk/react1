@@ -30,6 +30,7 @@ class ConnectionStatus extends Component{
     componentWillUnmount(){
         window.removeEventListener(`online`,this.isOnline);
         window.removeEventListener(`offline`, this.isOffline);
+        this.isOff();
     }
     render(){
         return <div className="status ">{this.state.status}</div>
