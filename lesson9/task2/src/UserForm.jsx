@@ -7,6 +7,7 @@ class UserForm extends Component{
         occupation: '', 
         about: ''
     }
+    
     handleChange =event=>{
 const { name, value, checked, type } = event.target;
 const val = type=== 'checkbox' ? checked : value;
@@ -14,10 +15,11 @@ this.setState({
     [name] : val
 })
     }
-    /*handleSubmit = event=>{
+   /* handleSubmit = event=>{
         event.preventDefault();
         console.log(this.state);
     }*/
+  
     render(){
         return (
             <form className="login-form" onSubmit={this.props.createUser(this.state)}>
