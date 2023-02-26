@@ -11,7 +11,7 @@ class UserFrom extends Component {
     }
     render(){
         return (
-            <form ref={this.setRef} className="login-form" onSubmit={this.createUser(this.formData)} >
+            <form ref={this.setRef} className="login-form" onSubmit={this.createUser([...new FormData(this.formRef)].reduce((acc, [name, value])=>({...acc, [name]: value}),{}))} >
   <h1 className="form-title">Profile</h1>
 
   <div className="form-control">
