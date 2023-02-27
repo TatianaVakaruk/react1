@@ -24,7 +24,7 @@ this.setState({
   
     render(){
         return (
-            <form className="login-form" onSubmit={this.props.createUser(this.state)}>
+            <form className="login-form" onSubmit={this.props.onSubmit(this.state)}>
   <h1 className="form-title">Profile</h1>
 
   <div className="form-control">
