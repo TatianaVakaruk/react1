@@ -7,7 +7,7 @@ createUser = (user)=>{
     }
    
 render(){
-    return <UserForm createUser={this.createUser}/>
+    return <UserForm onSubmit={this.createUser}/>
 }
 }
 export default App;

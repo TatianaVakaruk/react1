@@ -9,9 +9,13 @@ class UserFrom extends Component {
     setRef= node=>{
         this.formRef=node;
     }
+    handleSubmit = event => {
+      event.preventDefault();
+      this.props.onSubmit([...new FormData(this.formRef)].reduce((acc, [name, value])=>({...acc, [name]: value}),{}));
+    };
     render(){
         return (
-            <form ref={this.setRef} className="login-form" onSubmit={this.createUser([...new FormData(this.formRef)].reduce((acc, [name, value])=>({...acc, [name]: value}),{}))} >
+            <form ref={this.setRef} className="login-form" onSubmit={this.handleSubmit} >
   <h1 className="form-title">Profile</h1>
 
   <div className="form-control">
@@ -29,8 +33,8 @@ class UserFrom extends Component {
     <select name="occupation" className="form-input">
       <option value="london">London</option>
       <option value="new-york">New York</option>
-      <option value="coconut">Sidney</option>
-      <option value="mango">Berlin</option>
+      <option value="sidney">Sidney</option>
+      <option value="berlin">Berlin</option>
     </select>
   </div>
 
