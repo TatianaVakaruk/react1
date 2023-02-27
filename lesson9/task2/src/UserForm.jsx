@@ -4,11 +4,13 @@ class UserForm extends Component{
   
     state={
         name: '',
-        student: '',
+        student: false,
         occupation: '', 
         about: ''
     }
-   
+   setState=({
+[name]: value
+   })
   
     handleChange =event=>{
 const { name, value, checked, type } = event.target;
