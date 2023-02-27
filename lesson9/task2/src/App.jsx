@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import UserForm from './UserForm';
 class App extends Component{
 createUser = (e, user)=>{
-    e.preventDeafult();
+    e.preventDefault();
     console.log(user);
     }
    
