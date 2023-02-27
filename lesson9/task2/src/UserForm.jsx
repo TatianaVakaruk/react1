@@ -18,6 +18,10 @@ this.setState({
     [name] : val
 })
     }
+    handleSubmit = event => {
+      event.preventDefault();
+      this.props.onSubmit(this.state);
+    };
    /* handleSubmit = event=>{
         event.preventDefault();
         console.log(this.state);
@@ -25,7 +29,7 @@ this.setState({
   
     render(){
         return (
-            <form className="login-form" onSubmit={this.props.onSubmit(this.state)}>
+            <form className="login-form" onSubmit={this.handleSubmit}>
   <h1 className="form-title">Profile</h1>
 
   <div className="form-control">
