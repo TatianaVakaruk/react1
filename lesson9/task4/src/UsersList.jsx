@@ -26,7 +26,7 @@ class UsersList extends Component {
 
         return(
             <div>
-<Filter value={this.state.term} onChange={this.dataSearch}/>
+<Filter  onChange={this.dataSearch}/>
   <ul className="users">
   {this.props.users.map(user => <User key= {user.id} {...user}/>)}
   </ul>
