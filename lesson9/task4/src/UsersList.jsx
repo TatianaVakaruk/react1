@@ -12,6 +12,7 @@ class UsersList extends Component {
   }
   
  dataSearch = () => {
+  let filter;
   this.props.onChange;
 
  this.setState({

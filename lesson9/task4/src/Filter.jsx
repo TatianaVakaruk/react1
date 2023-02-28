@@ -1,27 +1,27 @@
 import React from 'react';
-const Filter =(filterText, count, onChange)=>{
-    
+const Filter =(filterText, count, onChange, isChange)=>{
+    let filter;
  onChange=()=>(e)=>{
     filterText = e.target.value.toLowerCase();
 
-    let filter = this.props.users.filter(user => {
+filter = this.props.users.filter(user => {
        return user.name.toLowerCase().includes(filterText);
     
     });
 }
-
+isChange=()=>{
     for (let i=0; i< this.props.users.length; i++){
         if (user.name.toLowerCase().includes(filterText)){
             count++;
         }
         return count;
     }
-
+}
 
 
     return(
         <div className="filter">
-    <span className="filter__count">{count}</span>
+    <span className="filter__count">{isChange}</span>
     <input type="text" onChange={onChange} className="filter__input" value={this.state.term} />
   </div>
     )
