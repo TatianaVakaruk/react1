@@ -6,27 +6,27 @@ class UsersList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
-     
-      //filterUsers:this.props.users,
-      filterText:''
+      filterText: "",
     };
   }
 
   dataSearch = (event) => {
-   let filterText= event.target.value.toLowerCase();
-
+    let filterText = event.target.value.toLowerCase();
     this.setState({
-    //...this.state,
       filterText,
-      
     });
   };
   render() {
-    let filterUsers= this.props.users.filter(user=>user.name.toLowerCase().includes(this.state.filterText));
+    let filterUsers = this.props.users.filter((user) =>
+      user.name.toLowerCase().includes(this.state.filterText)
+    );
     return (
       <div>
-        <Filter count ={filterUsers.length} filterText={this.state.filterText} onChange={this.dataSearch} />
+        <Filter
+          count={filterUsers.length}
+          filterText={this.state.filterText}
+          onChange={this.dataSearch}
+        />
         <ul className="users">
           {filterUsers.map((user) => (
             <User key={user.id} {...user} />
