@@ -12,7 +12,7 @@ filter = this.props.users.filter(user => {
 let isChange=()=>{
     count=0;
     for (let i=0; i< this.props.users.length; i++){
-        if (user.name.toLowerCase().includes(filterText)){
+        if (this.props.users.name.toLowerCase().includes(filterText)){
             count++;
         }
         return count;
