@@ -10,13 +10,13 @@ filter = this.props.users.filter(user => {
     });
 }
 let isChange=()=>{
-    count=0;
-    this.props.users.map(user =>{
-        if (user.name.toLowerCase().includes(filterText)){
-            count++;
-        }  
-        return count; 
+   
+    
+    count = this.props.users.map(user =>{
+      user.name.toLowerCase().includes(filterText);
+        
     })
+    return count.length;
     
 }
 
