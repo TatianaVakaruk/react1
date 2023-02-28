@@ -1,5 +1,5 @@
 import React from 'react';
-const Filter =(filterText, count, onChange, isChange)=>{
+const Filter =(filterText, count, onChange)=>{
     let filter;
  onChange=()=>(e)=>{
     filterText = e.target.value.toLowerCase();
@@ -9,7 +9,7 @@ filter = this.props.users.filter(user => {
     
     });
 }
-isChange=()=>{
+let isChange=()=>{
     for (let i=0; i< this.props.users.length; i++){
         if (user.name.toLowerCase().includes(filterText)){
             count++;
