@@ -23,7 +23,7 @@ let isChange=()=>{
     return(
         <div className="filter">
     <span className="filter__count">{isChange}</span>
-    <input type="text" onChange={onChange} className="filter__input" value={this.state.term} />
+    <input type="text" onChange={onChange} className="filter__input"  />
   </div>
     )
 
