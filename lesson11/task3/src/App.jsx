@@ -5,9 +5,9 @@ class App extends Component{
     state={
         isOpen: false,
     }
-    toggleeDialog=()=>{
+    toggleDialog=()=>{
    this.setState({
-    isOpen: true
+    isOpen: !isOpen
 })
         
     }
