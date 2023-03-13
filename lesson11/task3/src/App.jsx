@@ -7,7 +7,7 @@ class App extends Component{
     }
     toggleDialog=()=>{
    this.setState({
-    isOpen: !isOpen
+    isOpen:!isOpen
 })
         
     }

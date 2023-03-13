@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Expand extends React.Component{ 
+  
   render(){   
     return(
         <div className="expand border">
