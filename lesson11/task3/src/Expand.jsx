@@ -20,13 +20,20 @@ toggleDialog=()=>{
 }     
    
   render(){  
-    let result =(this.state.isOpen===true && <Children/>)
+    let result =(this.state.isOpen===true && <Children/>);
+    let teg;
+    if (this.state.isOpen){
+      teg= <i className="fas fa-chevron-up"></i>
+    }
+    else {
+      teg=<i className="fas fa-chevron-down"></i>
+    }
     return(
       <div className="expand border">
         <div className="expand__header">
           <span className="expand__title">{this.props.title}</span>
           <button onClick={this.toggleDialog} className="expand__toggle-btn">
-            <i className="fas fa-chevron-up"></i>
+          {teg}
           </button>
         </div>
         <div className="expand__content">{result}
