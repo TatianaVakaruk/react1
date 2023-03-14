@@ -1,4 +1,5 @@
 import React from 'react';
+import Children from './Children';
 
 class Expand extends React.Component{ 
   state={
@@ -6,22 +7,32 @@ class Expand extends React.Component{
 }
 
 toggleDialog=()=>{
+ if (this.state.isOpen === false){
   this.setState({
-   isOpen:!isOpen
-})
+    isOpen:true
+  })
+ }
+ else{
+  this.setState({
+    isOpen:false
+  })
+ }
 }     
    
-  render(){   
+  render(){  
+    let result = (this.state.isOpen && <Children/> ) 
     return(
+      <div className="app">
         <div className="expand border">
         <div className="expand__header">
-          <span className="expand__title">{this.props.title}</span>
+          <span className="expand__title">Some text</span>
           <button onClick={this.toggleDialog} className="expand__toggle-btn">
             <i className="fas fa-chevron-up"></i>
           </button>
         </div>
-        <div className="expand__content">{this.props.children}
+        <div className="expand__content">{result}
         </div>
+  </div>
   </div>
     )}
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import './index.scss';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Expand from './Expand';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Expand />, rootElement);
